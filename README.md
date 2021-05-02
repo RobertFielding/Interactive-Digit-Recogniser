@@ -1,4 +1,4 @@
-<h1> Interactive Digit Recogniser </h1>
+<h1> Interactive Digit Recogniser (96% accuracy) </h1>
 
 This project lets users input a digit between 0 and 9 into a [Tkinter](https://docs.python.org/3/library/tkinter.html) canvas.
 A trained neural network predicts the identity of the digit with associated probabilities.
