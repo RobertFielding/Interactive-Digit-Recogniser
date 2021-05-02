@@ -73,7 +73,7 @@ class DigitClassifier:
 
     def classify_digit(self):
         canvas = self.capture_canvas()
-        canvas_array = np.reshape(255 - np.array(canvas.convert("L")), (1, 28, 28, 1))
+        canvas_array = np.reshape((255 - np.array(canvas.convert("L"))) / 255, (1, 28, 28, 1))
         assert canvas_array.shape == (1, 28, 28, 1)
         pred_prob = nn_model.predict_proba(canvas_array)[0]
         self.clear_plot()
