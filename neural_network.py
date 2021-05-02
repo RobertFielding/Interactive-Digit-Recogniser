@@ -34,9 +34,9 @@ model.compile(optimizer="adam",
               loss=tf.keras.losses.SparseCategoricalCrossentropy(),
               metrics=['accuracy'])
 
-features_train = np.expand_dims(features_train, -1)
+features_train = np.expand_dims(features_train / 255, -1)
 labels_train = np.expand_dims(labels_train, -1)
-features_test = np.expand_dims(features_test, -1)
+features_test = np.expand_dims(features_test / 255, -1)
 labels_test = np.expand_dims(labels_test, -1)
 
 print("Start Training")
